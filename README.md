@@ -15,9 +15,9 @@ Clone the project, <code>cd</code> to your directory/download, and run the game.
 ### Rules
 Same as the classic game:
 
--Paper covers Rock
--Scissors cuts Paper
--Rock smashes Scissors
++ Paper covers Rock
++ Scissors cuts Paper
++ Rock smashes Scissors
 
 *Choose your weapon wisely!*
 
