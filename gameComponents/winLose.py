@@ -2,12 +2,12 @@ from gameComponents import gameVars
 
 
 def winorlose(status):
-    print("you " + status)
+    print("You " + status)
 
-    choice = input("do you want to play again? y/n: ")
+    choice = input("Would you like to play another round? y/n: ")
 
     if choice == "n":
-        print("========= see ya! (loser) ==========")
+        print("***** Catch ya Later! *****")
         exit()
     elif choice == "y":
         gameVars.playerLives = 5

@@ -1,49 +1,51 @@
 from random import randint
 from gameComponents import winLose, gameVars
 
+print("***** Welcome to the RPS Stadium *****")
+
 # set up our game loop so that we can keep playing and not exit
 while gameVars.player is False:
-    gameVars.player = input("Choose your weapon: rock, paper or scissors: ")
+    gameVars.player = input("Rock, Paper, Scissors: ")
     gameVars.computer = gameVars.choices[randint(0, 2)]
 
-    print("player chose: " + gameVars.player)
-    print("computer chose: " + gameVars.computer)
+    print("Player chose: " + gameVars.player)
+    print("Opponent chose: " + gameVars.computer)
 
     if gameVars.computer == gameVars.player:
         # tie - nothing else to compare, so it'll exit
-        print("tie! try again")
+        print("Tie! Try again")
 
     elif gameVars.player == "rock":
         if gameVars.computer == "paper":
-            print("you lose!")
+            print("You Lose!")
             gameVars.playerLives = gameVars.playerLives - 1
         else:
-            print("you win!")
+            print("You Win!")
             gameVars.computerLives = gameVars.computerLives - 1
 
     elif gameVars.player == "paper":
         if gameVars.computer == "scissors":
-            print("you lose!")
+            print("You Lose!")
             gameVars.playerLives = gameVars.playerLives - 1
         else:
-            print("you win!")
+            print("You Win!")
             gameVars.computerLives = gameVars.computerLives - 1
 
     elif gameVars.player == "scissors":
         if gameVars.computer == "rock":
-            print("you lose!")
+            print("You Lose!")
             gameVars.playerLives = gameVars.playerLives - 1
         else:
-            print("you win!")
+            print("You Win!")
             gameVars.computerLives = gameVars.computerLives - 1
 
-    print("player life count: " + str(gameVars.playerLives))
-    print("computer life count: " + str(gameVars.computerLives))
+    print("Player lives: " + str(gameVars.playerLives))
+    print("Opponent lives: " + str(gameVars.computerLives))
 
     if gameVars.playerLives == 0:
-        winLose.winorlose("lost")
+        winLose.winorlose("Lost")
 
     elif gameVars.computerLives == 0:
-        winLose.winorlose("won")
+        winLose.winorlose("Won")
 
     gameVars.player = False
